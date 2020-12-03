@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
 // import { HighlightDirective } from './directives/highlight.directive';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
+// import { AuthInterceptor } from './interceptors/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,

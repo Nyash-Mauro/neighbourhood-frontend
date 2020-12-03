@@ -45,6 +45,38 @@ export class AuthServiceService {
       }),
       shareReplay()
     );
-
+  } 
+  logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('refresh');
+    localStorage.removeItem('expires_at');
+  }
+  refreshToken(){
+    if (
+      moment().isBetween(
+        this.getExpiration().subtract(1, 'days'),
+        this.getExpiration()
+      )
+    ){
+      return this.http.post(this.apiRoot.concat('token/refresh/'),{refresh:this.refresh})
+      .pipe(
+        tap((response) => {
+          console.log('refreshToken response',response);this.setSession(response);
+        }),
+        shareReplay()
+      )
+      .subscribe();
+    }
+  }
+  getExpiration(){
+    const expiration = localStorage.getItem('expires_at');
+    const expiresAt = JSON.parse(expiration);
+    return moment(expiresAt);
+  }
+  isLoggedIn(){
+    return moment().isBefore(this.getExpiration());
+  }
+  isLoggedOut(){
+    return !this.isLoggedIn();
   }
 }
