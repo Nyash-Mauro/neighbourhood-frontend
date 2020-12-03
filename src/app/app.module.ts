@@ -8,13 +8,13 @@ import { LoginComponent } from './login/login.component';
 // import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './guards/auth.guard';
-// import { HighlightDirective } from './directives/highlight.directive';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { HighlightDirective } from './directives/hightlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    // HighlightDirective
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
@@ -27,8 +27,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   providers: [
     AuthGuard,
     {
-      provide:HTTP HTTP_INTERCEPTORS,
-      uesClass:AuthInterceptor,
+      provide:HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
       multi:true,
     }
   ],
