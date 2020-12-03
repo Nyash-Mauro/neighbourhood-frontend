@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
   login(fullname: string,emailaddress: string, password: string) {
     console.log('username, password ', fullname,emailaddress, password);
 
-    this.authService.login(fullname,emailaddress, password).subscribe(
-      (success) => this.router.navigate(['/']),
-      (error) => (this.error = error)
+    // this.authService.login(fullname,emailaddress, password).subscribe(
+    //   (success) => this.router.navigate(['/']),
+    //   (error) => (this.error = error)
     );
 }
