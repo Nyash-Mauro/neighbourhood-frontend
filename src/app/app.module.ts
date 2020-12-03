@@ -11,12 +11,16 @@ import { AuthGuard } from './guards/auth.guard';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HighlightDirective } from './directives/hightlight.directive';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HighlightDirective,
-    NavbarComponent
+    NavbarComponent,
+    ProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
