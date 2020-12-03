@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(username: string,emailaddress: string, password: string) {
-    console.log('username, password ', username,emailaddress, password);
+    console.log('username, emailaddress,password ', username,emailaddress, password);
 
     this.authService.login(username,emailaddress, password).subscribe(
       (success) => this.router.navigate(['/']),
