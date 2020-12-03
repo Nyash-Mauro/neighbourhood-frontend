@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import alanBtn from '@alan-ai/alan-sdk-web';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,10 +23,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HighlightDirective,
     NavbarComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
