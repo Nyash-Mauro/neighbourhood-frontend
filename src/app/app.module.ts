@@ -13,6 +13,7 @@ import { HighlightDirective } from './directives/hightlight.directive';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     // NgbModule,
     HttpClientModule,
-    // BrowserAnimationsModule,
+    BrowserAnimationsModule,
     // ToastrModule.forRoot
   ],
   providers: [
