@@ -16,6 +16,10 @@ import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import { FooterComponent } from './footer/footer.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PostsComponent } from './posts/posts.component';
+import { BusinessComponent } from './business/business.component';
+import { ServicesComponent } from './services/services.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,11 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     ProfileComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AdminDashboardComponent,
+    PostsComponent,
+    BusinessComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
