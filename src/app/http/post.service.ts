@@ -1,17 +1,17 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Observable,  of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { User } from '../models/user';
+import { post } from '../models/post';
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class HomeService {
-  private apiRoot = '';
+export class PostService {
 
   constructor(private http: HttpClient) {}
-
+  private apiRoot = '';
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // send the error to remote logging infrastructure
@@ -25,12 +25,13 @@ export class HomeService {
     };
   }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiRoot).pipe(
+  getAdmin(): Observable<post[]> {
+    return this.http.get<post[]>(this.apiRoot).pipe(
       tap((_) => {
-        console.log('fetched users');
+        console.log('fetched the post');
       }),
-      catchError(this.handleError<User[]>('geUsers', []))
+      catchError(this.handleError<post[]>('getpost', []))
     );
   }
 }
+

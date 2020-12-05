@@ -20,6 +20,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { PostsComponent } from './posts/posts.component';
 import { BusinessComponent } from './business/business.component';
 import { ServicesComponent } from './services/services.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +34,12 @@ import { ServicesComponent } from './services/services.component';
     AdminDashboardComponent,
     PostsComponent,
     BusinessComponent,
-    ServicesComponent
+    ServicesComponent,
+    UserDashboardComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
-    
     AppRoutingModule,
     NgbModule,
     HttpClientModule,

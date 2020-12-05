@@ -4,7 +4,18 @@
   position: relative;
   margin: 0% auto;
   border-radius: 10px;
-  background:#29a0b0;
+  background: #29a0b0;
+  /* box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(0, 0, 0, 0.3); */
+  overflow: hidden;
+}
+#login:hover {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  margin: 0% auto;
+  border-radius: 10px;
+  background: #29a0b0;
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -33,7 +44,8 @@
 }
 input {
   font-size: 11px;
-  color: #29a0b0;
+}
+input:hover {
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(0, 0, 0, 0.3);
 }
@@ -50,12 +62,12 @@ button {
   position: relative;
   background: #fc4322 !important;
   border-radius: 20px;
-  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-    -8px -8px 12px 0 rgba(0, 0, 0, 0.25);
   transition: 0.5s;
 }
 button:hover {
   background: #ec573d !important;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(0, 0, 0, 0.25);
 }
 button:active {
   background: #bd260c !important;
