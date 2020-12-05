@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 html,body {
     margin: 0px;
-    background-color:#1890a0;
+    background-color:#ffff;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
