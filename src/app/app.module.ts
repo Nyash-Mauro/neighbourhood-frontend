@@ -14,6 +14,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import alanBtn from '@alan-ai/alan-sdk-web';
+import { FooterComponent } from './footer/footer.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PostsComponent } from './posts/posts.component';
+import { BusinessComponent } from './business/business.component';
+import { ServicesComponent } from './services/services.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +29,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HighlightDirective,
     NavbarComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    AdminDashboardComponent,
+    PostsComponent,
+    BusinessComponent,
+    ServicesComponent,
+    UserDashboardComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
