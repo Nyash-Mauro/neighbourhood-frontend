@@ -14,7 +14,6 @@ export class ServicesComponent implements OnInit {
       "imageUrl":"src/assets/img/spa.jpg"
     }
 
- 
 
   constructor() { }
 
