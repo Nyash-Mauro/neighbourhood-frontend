@@ -1,9 +1,10 @@
 
 export interface profile {
-    url: string;
-    username: string;
+    bio:string;
+    firstname: string;
+    lastname: string;
     email: string;
-    name: string;
-    phone: number;
+    nickname: string;
+    contact: number;
   }
   
