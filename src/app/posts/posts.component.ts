@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PostServiceService} from 'src/app/http/post.service'
+import {PostService} from 'src/app/http/post.service';
+import {FormsModule} from '@angular/forms';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -9,7 +10,7 @@ export class PostsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

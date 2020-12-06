@@ -6,10 +6,15 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import {ProfileComponent} from './profile/profile.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
+import {ServicesComponent} from './services/services.component';
+import {BusinessComponent} from './business/business.component';
+import {HoodsComponent} from './hoods/hoods.component';
+import {SignupComponent} from './signup/signup.component';
 
- const routes: Routes = [  
+const routes: Routes = [  
 { path: '', component: HomeComponent, canActivate: [AuthGuard] },
 { path: 'login', component: LoginComponent },
+{ path: 'signup', component: SignupComponent },
 { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
 {path:'user',component:UserDashboardComponent,canActivate:[AuthGuard],
 data:{
@@ -21,7 +26,10 @@ data:{
   role:'ROLE_ADMIN'
 }
 },
-// { path: 'user/:id', component: UserProfileComponent },
+{ path: 'user/:id', component: ProfileComponent },
+{ path: 'business', component: BusinessComponent },
+{ path: 'hoods', component: HoodsComponent },
+{ path: 'services', component: ServicesComponent },
 ];
 
 @NgModule({

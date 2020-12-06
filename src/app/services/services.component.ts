@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ServiceService} from '../http/service.service';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
@@ -14,7 +14,6 @@ export class ServicesComponent implements OnInit {
       "imageUrl":"src/assets/img/spa.jpg"
     }
 
-  ]
 
   constructor() { }
 

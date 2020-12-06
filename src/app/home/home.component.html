@@ -1,6 +1,15 @@
 <app-navbar></app-navbar>
 
 <app-posts></app-posts>
+<form (ngSubmit)="getUsers()">
+  <div  class="form-group">
+
+    <input type="text" required class="" id="post"  name="username"
+      placeholder="Search for the business">
+
+    <button type="submit" class="submit" name="button">Enter</button><span class="subscribe-span"> </span>
+  </div>
+</form>
 <!-- <div class="row mt-5">
     <div class="col-md-6">
       <h3>Add members</h3>

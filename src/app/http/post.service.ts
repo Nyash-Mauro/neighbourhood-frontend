@@ -11,7 +11,7 @@ import { post } from '../models/post';
 export class PostService {
 
   constructor(private http: HttpClient) {}
-  private apiRoot = '';
+  private apiRoot = 'https://hoodbe.herokuapp.com/';
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // send the error to remote logging infrastructure
