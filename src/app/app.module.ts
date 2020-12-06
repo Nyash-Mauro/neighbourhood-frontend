@@ -22,6 +22,8 @@ import { BusinessComponent } from './business/business.component';
 import { ServicesComponent } from './services/services.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { HoodsComponent } from './hoods/hoods.component';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
     BusinessComponent,
     ServicesComponent,
     UserDashboardComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    HoodsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 })
 
 export class AppComponent {
-    // title = 'neighbourhood';
+    title = 'neighbourhood';
     alanBtnInstance;
   
   constructor(){

@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
 import jwtDecode from 'jwt-decode';
+import { environment } from '../../environments/environment';
+import { map } from 'rxjs/operators';
+import { Observable} from 'rxjs';
 import * as moment from 'moment';
 import { JWTPayload } from '../models/jwtpayload';
 import { tap, shareReplay } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  private apiRoot='';
+  private apiRoot='https://hoodbe.herokuapp.com/api/v1/';
+  private httpOptions;
+  private httpClient;
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient)
+  {}
   private setSession(authResult){
     console.log({authResult});
 
@@ -34,6 +41,9 @@ export class AuthServiceService {
   get refresh():string{
     return localStorage.getItem('refresh');
   }
+  signup(username:string,emailaddress:string,password): Observable<any> {
+    return this.httpClient.post({ username, emailaddress,password })
+}
   login(username:string,emailaddress:string,password)
   {
     return this.http
@@ -79,4 +89,5 @@ export class AuthServiceService {
   isLoggedOut(){
     return !this.isLoggedIn();
   }
+
 }
