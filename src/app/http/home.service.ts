@@ -30,7 +30,7 @@ export class HomeService {
       tap((_) => {
         console.log('fetched users');
       }),
-      catchError(this.handleError<User[]>('geUsers', []))
+      catchError(this.handleError<User[]>('getUsers', []))
     );
   }
 }

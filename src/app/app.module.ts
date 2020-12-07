@@ -18,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { PostsComponent } from './posts/posts.component';
 import { BusinessComponent } from './business/business.component';
-import { ServicesComponent } from './services/services.component';
+import { ServiceComponent } from './services/services.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { HoodsComponent } from './hoods/hoods.component';
@@ -35,7 +35,7 @@ import { SignupComponent } from './signup/signup.component';
     AdminDashboardComponent,
     PostsComponent,
     BusinessComponent,
-    ServicesComponent,
+    ServiceComponent,
     UserDashboardComponent,
     AdminNavbarComponent,
     HoodsComponent,
