@@ -17,10 +17,10 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  signup(user_name: string,emailaddress: string, password: string) {
-    console.log('username, emailaddress,password ', user_name,emailaddress, password);
+  signup(user_name: string,email: string, password: string) {
+    console.log('username, email,password ', user_name,email, password);
   
-    this.authService.signup(user_name,emailaddress, password).subscribe(
+    this.authService.signup(user_name,email, password).subscribe(
       (success) => {
         this.router.navigate(['/login']);
       },
