@@ -18,19 +18,19 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(username: string,emailaddress: string, password: string) {
-    console.log('username, emailaddress,password ', username,emailaddress, password);
+  login(user_name: string, password: string) {
+    console.log('user_name, password ', user_name ,password);
 
-    this.authService.login(username,emailaddress, password).subscribe(
-      (success) => this.router.navigate(['/']),
+    this.authService.login(user_name, password).subscribe(
+      (success) => this.router.navigate(['/profile']),
       (error) => (this.error = error)
     );
     
 }
-signup(username: string,emailaddress: string, password: string) {
-  console.log('username, emailaddress,password ', username,emailaddress, password);
+signup(user_name: string,emailaddress: string, password: string) {
+  console.log('user_name, emailaddress,password ', user_name,emailaddress, password);
 
-  this.authService.signup(username,emailaddress, password).subscribe(
+  this.authService.signup(user_name,emailaddress, password).subscribe(
     (success) => this.router.navigate(['/login']),
     (error) => (this.error = error)
   );

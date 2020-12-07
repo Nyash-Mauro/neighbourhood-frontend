@@ -5,13 +5,13 @@ import { Observable} from 'rxjs';
 import * as moment from 'moment';
 import { JWTPayload } from '../models/jwtpayload';
 import { tap, shareReplay } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
-  private apiRoot='https://hoodbe.herokuapp.com';
-  private httpOptions;
+  private apiRoot=environment+'https://hoodbe.herokuapp.com/api/v1/signup/';
   private httpClient;
 
   constructor(private http:HttpClient)
@@ -28,7 +28,8 @@ export class AuthServiceService {
       localStorage.setItem('token',authResult.access);
       localStorage.setItem('refresh',authResult.refresh);
       localStorage.setItem('expires_at',JSON.stringify(expiresAt.valueOf()));
-    }else{
+    }
+    else{
       localStorage.setItem('token',authResult.access);
       localStorage.setItem('expires_at',JSON.stringify(expiresAt.valueOf()));
     }
@@ -36,16 +37,19 @@ export class AuthServiceService {
   get token():string{
     return localStorage.getItem('token');
   }
+
   get refresh():string{
     return localStorage.getItem('refresh');
-  }
+  }}
+
   signup(username:string,emailaddress:string,password): Observable<any> {
-    return this.httpClient.get({ username, emailaddress,password })
-}
-  login(username:string,emailaddress:string,password)
+    return this.httpClient.post({ username, emailaddress,password })
+  }
+
+  login(username:string,password)
   {
     return this.http
-    .post(this.apiRoot.concat('token/'), { username, emailaddress,password })
+    .post(this.apiRoot.concat('token/'), { username,password })
     .pipe(
       tap((response) => {
         console.log({ response });

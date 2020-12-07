@@ -6,7 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import {ProfileComponent} from './profile/profile.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
-import {ServicesComponent} from './services/services.component';
+import {ServiceComponent} from './services/services.component';
 import {BusinessComponent} from './business/business.component';
 import {HoodsComponent} from './hoods/hoods.component';
 import {SignupComponent} from './signup/signup.component';
@@ -29,7 +29,7 @@ data:{
 { path: 'user/:id', component: ProfileComponent },
 { path: 'business', component: BusinessComponent },
 { path: 'hoods', component: HoodsComponent },
-{ path: 'services', component: ServicesComponent },
+{ path: 'services', component: ServiceComponent },
 ];
 
 @NgModule({
