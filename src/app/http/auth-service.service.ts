@@ -40,16 +40,16 @@ export class AuthServiceService {
 
   get refresh():string{
     return localStorage.getItem('refresh');
-  }}
-
-  signup(username:string,emailaddress:string,password): Observable<any> {
-    return this.httpClient.post({ username, emailaddress,password })
   }
 
-  login(username:string,password)
+    signup(user_name:string,email:string,password): Observable<any> {
+      return this.httpClient.post({ user_name, email,password })
+    }
+
+  login(user_name:string,password)
   {
     return this.http
-    .post(this.apiRoot.concat('token/'), { username,password })
+    .post(this.apiRoot.concat('token/'), { user_name,password })
     .pipe(
       tap((response) => {
         console.log({ response });
